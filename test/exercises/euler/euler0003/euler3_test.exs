@@ -7,6 +7,6 @@ defmodule Euler3Test do
   end
 
   test "with input 600_851_475_143" do
-    assert Euler3.run(60_0851_475_143) == 6_857
+    assert Euler3.run(600_851_475_143) == 6_857
   end
 end

@@ -7,12 +7,7 @@ defmodule AoC2015Day01Part2 do
       |> Enum.reduce({:continue, 0}, fn({char, index}, memo) ->
         {status, acc} = memo
 
-        new_acc =
-          case char do
-            "(" -> acc + 1
-            ")" -> acc - 1
-            _   -> acc
-          end
+        new_acc = prepare_new_acc(char, acc)
 
         cond do
           status == :continue && new_acc == -1 ->
@@ -27,6 +22,14 @@ defmodule AoC2015Day01Part2 do
     cond do
       status == :continue -> -1
       status == :stop -> position
+    end
+  end
+
+  defp prepare_new_acc(char, acc) do
+    case char do
+      "(" -> acc + 1
+      ")" -> acc - 1
+      _   -> acc
     end
   end
 end
