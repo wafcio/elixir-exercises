@@ -6,7 +6,7 @@ defmodule Euler4 do
     find_largest_palindrom(a, a + 1, max , 0)
   end
 
-  def find_largest_palindrom(a, b, max, largest_palindrom) when a == max do
+  def find_largest_palindrom(a, _b, max, largest_palindrom) when a == max do
     largest_palindrom
   end
 

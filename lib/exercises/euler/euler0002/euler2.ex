@@ -20,7 +20,7 @@ defmodule Euler2 do
     calculate_sum(n, num2, new_value, new_sum, new_value)
   end
 
-  def calculate_sum(n, num1, num2, sum, value) when value >= n do
+  def calculate_sum(n, _num1, _num2, sum, value) when value >= n do
     sum
   end
 end

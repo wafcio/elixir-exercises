@@ -10,7 +10,7 @@ defmodule Euler3 do
     end
   end
 
-  def find_largest_prime_factor(n, m) do
+  def find_largest_prime_factor(_n, m) do
     m
   end
 end

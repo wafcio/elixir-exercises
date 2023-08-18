@@ -4,7 +4,8 @@ defmodule Euler5 do
     |> Enum.reduce(1, fn(number, acc) -> acc * number end)
   end
 
-  def find_all_prime_factors(number, n, factors \\ []) when number > n do
+  def find_all_prime_factors(number, n, factors \\ [])
+  def find_all_prime_factors(number, n, factors) when number > n do
     factors
   end
 
@@ -14,7 +15,8 @@ defmodule Euler5 do
     find_all_prime_factors(number + 1, n, factors ++ missing_factors)
   end
 
-  def prime_factors(number, m \\ 2, factors \\ []) when number > 1 do
+  def prime_factors(number, m \\ 2, factors \\ [])
+  def prime_factors(number, m, factors) when number > 1 do
     if rem(number, m) == 0 do
       prime_factors(div(number, m), m, factors ++ [m])
     else
